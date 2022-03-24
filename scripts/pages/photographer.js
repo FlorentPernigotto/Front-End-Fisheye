@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
          }
 
-         // filtre tout les médias en fonction de l'id photograph
+         // filtre tout les médias en lié de l'id photograph
 
          function displayPhotographerMedias(mediasArray){
 
@@ -46,7 +46,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                 return media.photographerId === Number(photographerId);
             });
-
-            console.log (photographerId)
          }
 });
