@@ -28,11 +28,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
          function displayPhotographerInfo(photographersArray){
 
-              const photographerInfo = photographersArray.filter((photographer)=>{
+              const photographersInfos = photographersArray.filter((photographer)=>{
 
                     return photographer.id === Number(photographerId);
 
               });
+
+              const photographerHTML = `
+              
+            <div class="photographer-profile">
+                Mimi Keel </br>
+                London, UK </br>
+                Voir le beau dans le quotidien
+            </div>
+            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+            <div class="user-pic">
+              <!-- insérer la photo ici -->
+            </div>
+              
+              `;
+
+              document.querySelector(".photograph-header").innerHTML = photographerHTML;
+
+
 
               
 
@@ -47,4 +65,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 return media.photographerId === Number(photographerId);
             });
          }
+
+        
 });
+
+function displayInfoContainer(){
+
+}

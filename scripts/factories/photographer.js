@@ -41,5 +41,7 @@ function photographerFactory(data) {
         priceContainer.appendChild(valuePerDay)
         return (article);
     }
-    return { name, picture, getUserCardDOM }
+    return { getUserCardDOM }
+
+    
 }
