@@ -45,9 +45,13 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.photographer-picture {
+.picture_container {
     display: flex;
     justify-content: center;
+}
+.card_picture img {
+    width: 100px;
+    height: 100px;
 }
 /*modal card*/
 

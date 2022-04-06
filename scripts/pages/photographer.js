@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                 return media.photographerId === Number(photographerId);
             });
-            alert(photographerMedias[0].image);
             const photographerPicture = `
             
             <div class="card-container">
@@ -67,13 +66,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 <span> Trier par : </span>
               </div>
               <div class="picture_container>
-                <div class="cardPicture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].id}.jpg">
+                <div class="card_picture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image[0]}">
+                </div>
+                <div class="card_picture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image[1]}">
+                </div>
+                <div class="card_picture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image[2]}">
+                </div>
+                <div class="card_picture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image[3]}">
+                </div>
+                <div class="card_picture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image[4]}">
+                </div>
+                <div class="card_picture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image[5]}">
                 </div> 
-            
               </div>
             </div>
-          
           `;
 
           document.querySelector(".photographer_picture").innerHTML = photographerPicture;
