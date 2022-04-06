@@ -32,25 +32,40 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                     return photographer.id === Number(photographerId);
 
-              });
+              }); 
 
-              const photographerHTML = `
+              const photographerProfile = `
               
             <div class="photographer-profile">
-                Mimi Keel </br>
-                London, UK </br>
-                Voir le beau dans le quotidien
+                <h2>${photographersInfos[0].name}</h2></br>
+                <span>${photographersInfos[0].city}, ${photographersInfos[0].country}</span> </br>
+                <quote>${photographersInfos[0].tagline}</quote>
             </div>
             <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
             <div class="user-pic">
-              <!-- insérer la photo ici -->
+              <img src=assets/photographers/portrait/${photographersInfos[0].portrait}>
             </div>
+              `;
+
+              document.querySelector(".photograph-header").innerHTML = photographerProfile;
+
+              const photographerPicture = `
+            
+                <div class="card-container">
+                  <div class="filter">
+                    <span> Trier par : </span>
+                  </div>
+                  <div class="picture_container>
+                    <div class="cardPicture">
+                      <img src=assets/photographers${photographersMedias[0].images}>
+                    </div> 
+                
+                  </div>
+                </div>
               
               `;
 
-              document.querySelector(".photograph-header").innerHTML = photographerHTML;
-
-
+              document.querySelector(".photographer_picture").innerHTML = photographerPicture;
 
               
 

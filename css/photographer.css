@@ -12,6 +12,18 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.photographer-profile {
+    display: flex;
+    flex-direction: column;
+}
+.photographer-profile h2 {
+    font-size: 5em;
+    font-weight: 300;
+    color: #901C1C;
+}
+.photographer-profile span {
+
+}
 
 .contact_button {
     font-size: 20px;
@@ -25,7 +37,12 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
+.user-pic img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
