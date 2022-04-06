@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                 return media.photographerId === Number(photographerId);
             });
-            
+            alert(photographerMedias[0].image);
             const photographerPicture = `
             
             <div class="card-container">
