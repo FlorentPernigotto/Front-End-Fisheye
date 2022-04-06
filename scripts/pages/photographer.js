@@ -49,26 +49,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
               document.querySelector(".photograph-header").innerHTML = photographerProfile;
 
-              const photographerPicture = `
-            
-                <div class="card-container">
-                  <div class="filter">
-                    <span> Trier par : </span>
-                  </div>
-                  <div class="picture_container>
-                    <div class="cardPicture">
-                      <img src=assets/photographers${photographersMedias[0].images}>
-                    </div> 
-                
-                  </div>
-                </div>
-              
-              `;
-
-              document.querySelector(".photographer_picture").innerHTML = photographerPicture;
-
-              
-
          }
 
          // filtre tout les médias en lié de l'id photograph
@@ -79,6 +59,25 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                 return media.photographerId === Number(photographerId);
             });
+            
+            const photographerPicture = `
+            
+            <div class="card-container">
+              <div class="filter">
+                <span> Trier par : </span>
+              </div>
+              <div class="picture_container>
+                <div class="cardPicture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].id}.jpg">
+                </div> 
+            
+              </div>
+            </div>
+          
+          `;
+
+          document.querySelector(".photographer_picture").innerHTML = photographerPicture;
+
          }
 
         

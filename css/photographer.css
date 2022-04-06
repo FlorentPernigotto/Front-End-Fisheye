@@ -15,14 +15,16 @@
 .photographer-profile {
     display: flex;
     flex-direction: column;
+    left: 10em;
 }
 .photographer-profile h2 {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 300;
     color: #901C1C;
 }
 .photographer-profile span {
-
+    font-size: 2em;
+    color: #901C1C;
 }
 
 .contact_button {
@@ -43,6 +45,12 @@
     object-fit: cover;
     border-radius: 50%;
 }
+.photographer-picture {
+    display: flex;
+    justify-content: center;
+}
+/*modal card*/
+
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
