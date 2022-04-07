@@ -62,30 +62,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
             console.log(photographerId);
             const photographerPicture = `
             
-            <div class="card-container">
-              
-              <div class="picture-container">
-                <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image}">
+              <div class="card-container">
+                <div class="picture-container">
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image}">
+                  </div>
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}">
+                  </div>
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[2].image}">
+                  </div>
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[3].image}">
+                  </div>
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}">
+                  </div>
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}">
+                  </div> 
                 </div>
-                <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}">
-                </div>
-                <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[2].image}">
-                </div>
-                <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[3].image}">
-                </div>
-                <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}">
-                </div>
-                <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}">
-                </div> 
               </div>
-            </div>
-          `;
+            `;
 
           document.querySelector(".photographer-picture").innerHTML = photographerPicture;
 
