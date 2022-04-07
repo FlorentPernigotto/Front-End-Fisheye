@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                   <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}">
                 </div>
                 <div class="card-picture">
-                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5 ].image}">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}">
                 </div> 
               </div>
             </div>
