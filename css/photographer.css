@@ -28,8 +28,6 @@ main {
     flex-direction: column;
     left: 10em;
 }
-.photographer-profile h2 {
-}
 .photographer-profile span {
     font-size: 2em;
     color: #901C1C;
