@@ -1,7 +1,18 @@
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    font-weight: 300;
+    color: #D3573C;
+}
 #contact_modal {
     display: none;
 }
-
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .photograph-header {
     display: flex;
     flex-direction: row;
@@ -18,9 +29,6 @@
     left: 10em;
 }
 .photographer-profile h2 {
-    font-size: 4em;
-    font-weight: 300;
-    color: #901C1C;
 }
 .photographer-profile span {
     font-size: 2em;
@@ -45,13 +53,29 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.picture_container {
+.card-container {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
-.card_picture img {
-    width: 100px;
-    height: 100px;
+.picture-container {
+    display: flex;
+    justify-content: center;
+    gap: 95px;
+    flex-direction: row;
+    width: 70%;
+    flex-wrap: wrap;
+}
+.card-picture img {
+    display: flex;
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+}
+.filter {
+    display: flex;
+    width: 90%;
 }
 /*modal card*/
 
