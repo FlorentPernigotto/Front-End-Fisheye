@@ -23,13 +23,15 @@ h1 {
     height: 50px;
     margin-left: 100px;
 }
-
 .photographer_section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 70px;
-    margin-top: 100px;
-    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    gap: 95px;
+    margin: 100px 2em 50px 2em;
+    width: 75%;
 }
 
 .photographer_section article {
