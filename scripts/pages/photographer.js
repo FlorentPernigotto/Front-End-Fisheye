@@ -27,38 +27,35 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
          function displayPhotographerInfo(photographersArray){
+            const photographersInfos = photographersArray.filter((photographer)=>{
 
-              const photographersInfos = photographersArray.filter((photographer)=>{
+                return photographer.id === Number(photographerId);
 
-                    return photographer.id === Number(photographerId);
+            }); 
 
-              }); 
+            const photographerProfile = `
+            
+              <div class="photographer-profile">
+                  <h2>${photographersInfos[0].name}</h2></br>
+                  <span>${photographersInfos[0].city}, ${photographersInfos[0].country}</span> </br>
+                  <quote>${photographersInfos[0].tagline}</quote>
+              </div>
+              <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+              <div class="user-pic">
+                <img src=assets/photographers/portrait/${photographersInfos[0].portrait}>
+              </div>
+            `;
 
-              const photographerProfile = `
-              
-            <div class="photographer-profile">
-                <h2>${photographersInfos[0].name}</h2></br>
-                <span>${photographersInfos[0].city}, ${photographersInfos[0].country}</span> </br>
-                <quote>${photographersInfos[0].tagline}</quote>
-            </div>
-            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-            <div class="user-pic">
-              <img src=assets/photographers/portrait/${photographersInfos[0].portrait}>
-            </div>
-              `;
+            document.querySelector(".photograph-header").innerHTML = photographerProfile;
 
-              document.querySelector(".photograph-header").innerHTML = photographerProfile;
-
-         }
+          }
 
          // filtre tout les médias en lié de l'id photograph
 
          function displayPhotographerMedias(mediasArray){
-
             const photographersMedias = mediasArray.filter((media)=>{
-
                 return media.photographerId === Number(photographerId);
-            });
+              });
             console.log(photographerId);
             const photographerPicture = `
             
@@ -86,11 +83,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
               </div>
             `;
 
-          document.querySelector(".photographer-picture").innerHTML = photographerPicture;
+            document.querySelector(".photographer-picture").innerHTML = photographerPicture;
 
-         }
+          }
 
-        
 });
 
 function displayInfoContainer(){
