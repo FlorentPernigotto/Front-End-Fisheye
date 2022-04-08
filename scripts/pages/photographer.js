@@ -62,9 +62,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
               <div class="card-container">
                 <div class="picture-container">
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image}">
-                  </div>
-                  <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}">
                   </div>
                   <div class="card-picture">
@@ -78,6 +75,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
                   </div>
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}">
+                  </div>
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[6].image}">
                   </div> 
                 </div>
               </div>
