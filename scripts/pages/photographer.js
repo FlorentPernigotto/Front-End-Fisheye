@@ -27,72 +27,52 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
          function displayPhotographerInfo(photographersArray){
+           
+          const photographersInfos = photographersArray.filter((photographer)=>{
+             
+            return photographer.id === Number(photographerId);
 
-              const photographersInfos = photographersArray.filter((photographer)=>{
-
-                    return photographer.id === Number(photographerId);
-
-              }); 
-
+            }); 
               const photographerProfile = `
-              
-            <div class="photographer-profile">
-                <h2>${photographersInfos[0].name}</h2></br>
-                <span>${photographersInfos[0].city}, ${photographersInfos[0].country}</span> </br>
-                <quote>${photographersInfos[0].tagline}</quote>
-            </div>
-            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-            <div class="user-pic">
-              <img src=assets/photographers/portrait/${photographersInfos[0].portrait}>
-            </div>
-              `;
+
+                <div class="photographer-profile">
+                    <h2>${photographersInfos[0].name}</h2></br>
+                    <span>${photographersInfos[0].city}, ${photographersInfos[0].country}</span> </br>
+                    <quote>${photographersInfos[0].tagline}</quote>
+                </div>
+                <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+                <div class="user-pic">
+                  <img src=assets/photographers/portrait/${photographersInfos[0].portrait}>
+                </div>
+                  `;
 
               document.querySelector(".photograph-header").innerHTML = photographerProfile;
 
-         }
+        }
 
          // filtre tout les médias en lié de l'id photograph
 
-         function displayPhotographerMedias(mediasArray){
-
-            const photographersMedias = mediasArray.filter((media)=>{
-
-                return media.photographerId === Number(photographerId);
-            });
-            console.log(photographerId);
-            const photographerPicture = `
-            
-              <div class="card-container">
-                <div class="picture-container">
-                  <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].image}">
-                  </div>
-                  <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}">
-                  </div>
-                  <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[2].image}">
-                  </div>
-                  <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[3].image}">
-                  </div>
-                  <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}">
-                  </div>
-                  <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}">
-                  </div> 
-                </div>
+        function displayPhotographerMedias(mediasArray){
+          const photographersMedias = mediasArray.filter((media)=>{
+            return media.photographerId === Number(photographerId);
+          });
+          const photographerPicture = `
+            <div class="card-container">
+              <div class="filter">
+                <span> Trier par : </span>
               </div>
-            `;
+              <div class="picture_container>
+                <div class="cardPicture">
+                  <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[0].id}.jpg">
+                </div> 
+            
+              </div>
+            </div>
+          
+          `;
 
-          document.querySelector(".photographer-picture").innerHTML = photographerPicture;
-
-         }
+          document.querySelector(".photographer_picture").innerHTML = photographerPicture;
+        }
 
         
 });
-
-function displayInfoContainer(){
-
-}
