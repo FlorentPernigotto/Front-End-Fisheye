@@ -34,6 +34,9 @@ main {
 }
 
 .contact_button {
+    display: flex;
+    align-self: center;
+    align-items: center;
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -46,8 +49,8 @@ main {
     cursor: pointer;
 }
 .user-pic img {
-    width: 300px;
-    height: 300px;
+    width: 15em;
+    height: 15em;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -61,7 +64,7 @@ main {
     justify-content: center;
     gap: 95px;
     flex-direction: row;
-    width: 70%;
+    width: 90%;
     flex-wrap: wrap;
 }
 .card-picture img {
