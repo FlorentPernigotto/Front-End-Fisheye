@@ -83,6 +83,21 @@ main {
     height: 350px;
     border-radius: 5px;
 }
+.under-picture {
+    display: flex;
+    flex-direction: row;
+}
+.picture-name {
+    display: flex;
+    color: #901C1C;
+    width: 50%;
+}
+.picture-likes {
+    display: flex;
+    color: #901C1C;
+    width: 50%;
+}
+/* Filtres */
 .filter {
     display: flex;
     flex-direction: row;
