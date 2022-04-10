@@ -20,18 +20,21 @@ h1 {
 }
 
 .logo {
+    width: 200px;
     height: 50px;
-    margin-left: 100px;
+    position: absolute;
+    left: 100px;
 }
 .photographer_section {
     display: flex;
     justify-content: space-between;
+    
     flex-direction: row;
     flex-wrap: wrap;
     align-self: center;
     gap: 95px;
     margin: 100px 2em 50px 2em;
-    width: 75%;
+    width: 90%;
 }
 
 .photographer_section article {
@@ -40,6 +43,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 326px;
 }
 .photographer_section article a {
     text-decoration: none;
@@ -57,8 +61,8 @@ h1 {
 }
 
 .photographer_section article img {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     object-fit: cover;
 }

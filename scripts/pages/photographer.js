@@ -77,7 +77,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}">
                   </div>
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[6].image}">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[6].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
+                    <div class="under-pîcture">
+                      <span>${photographersMedias[0].title}</span><span>${photographersMedias[0].likes}</span>
+                    </div>
                   </div> 
                 </div>
               </div>

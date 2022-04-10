@@ -13,6 +13,9 @@ main {
     flex-direction: column;
     justify-content: center;
 }
+.photographer-picture {
+    margin-bottom: 100px;
+}
 .photograph-header {
     display: flex;
     flex-direction: row;
@@ -57,7 +60,6 @@ main {
 .card-container {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
 }
 .picture-container {
     display: flex;
@@ -76,7 +78,51 @@ main {
 }
 .filter {
     display: flex;
+    flex-direction: row;
     width: 90%;
+    margin: 50px 18.5em;
+    align-items: baseline;
+
+}
+.filter span {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.filter-scroll {
+    display: flex;
+    width: 170px;
+    height: auto;
+    background-color: #901C1C;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.filter-scroll ul {
+    list-style-type: none;
+    color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    width: 80%;
+}
+
+.filter-scroll ul li {
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+}
+.filter-popularity {
+    display: flex;
+}
+.filter-date {
+    display: flex;/* none par default */
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+.filter-title {
+    display: flex; /* none par default */ 
+    border-bottom: 0px;
 }
 /*modal card*/
 
