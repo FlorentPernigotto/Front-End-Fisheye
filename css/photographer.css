@@ -12,6 +12,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
 }
 .photographer-picture {
     margin-bottom: 100px;
@@ -131,17 +132,19 @@ main {
     border-bottom: 0px;
 }
 /*modal card*/
-
 .modal {
+    display: flex;
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
     margin: auto;
+    position: absolute;
+    left: 25%;
+    top: 20%;
 }
 
 .modal header {
@@ -157,6 +160,7 @@ main {
     font-size: 64px;
     font-weight: normal;
     text-align: center;
+    color: #312E2E;
 }
 
 form {
@@ -184,4 +188,5 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+    font-size: 30px;
 }

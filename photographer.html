@@ -8,10 +8,32 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
+    
     <header>
       <a href="index.html" class="logo-home"><img src="assets/images/logo.png" alt="Fisheye Home Page" class="logo"/></a>
     </header>
     <main id="main">
+      <div id="contact_modal">
+        <div class="modal">
+          <header>
+            <h2>Contactez-moi</h2>
+            <img src="assets/icons/close.svg" onclick="closeModal()" />
+          </header>
+          <form>
+            <div>
+              <label for="contact-nickname">Prénom</label>
+              <input type="text" name="contact-nickname" id="contact-nickname"/>
+              <label for="contact-name">Nom</label>
+              <input type="text" name="contact-name" id="contact-name"/>
+              <label for="contact-email">Email</label>
+              <input type="email" name="contact-email" id="contact-email"/>
+              <label for="contact-message">Votre message</label>
+              <input type="text" name="contact-message" id="contact-message"/>
+            </div>
+            <button class="contact_button" onclick="closeModal()">Envoyer</button>
+          </form>
+        </div>
+      </div>
       <div class="photograph-header">
         
       </div>
@@ -30,22 +52,9 @@
         
       </div>
     </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-        </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
+    
     <script src="scripts/utils/contactForm.js"></script>
     <script src="scripts/pages/photographer.js"></script>
   </body>
 </html>
+ 
