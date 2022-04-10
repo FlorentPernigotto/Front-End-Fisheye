@@ -51,6 +51,12 @@ main {
     border-radius: 5px;
     cursor: pointer;
 }
+.contact_button:hover{
+    background-color: #D3573C;
+}
+.contact_button:focus{
+    background-color: #D3573C;
+}
 .user-pic img {
     width: 15em;
     height: 15em;
