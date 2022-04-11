@@ -24,7 +24,9 @@ main {
     width: 90%;
     height: 300px;
     margin: 0 100px;
-    justify-content: space-evenly;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
     align-items: center;
 }
 .photographer-profile {
@@ -94,6 +96,7 @@ main {
 }
 .picture-likes {
     display: flex;
+    justify-content: flex-end;
     color: #901C1C;
     width: 50%;
 }
@@ -102,26 +105,29 @@ main {
     display: flex;
     flex-direction: row;
     width: 90%;
-    margin: 50px 18.5em;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    margin-top: 10px;
     align-items: baseline;
 
 }
-.filter span {
+.filter label {
     font-weight: 700;
     font-size: 18px;
     margin-left: 10px;
 }
-.filter-scroll {
+#filter-scroll {
     display: flex;
     width: 170px;
-    height: auto;
+    height: 50px;
     background-color: #901C1C;
     border-radius: 5px;
     margin-left: 20px;
+    font-family: "DM Sans", sans-serif;
 }
-.filter-scroll ul {
+#filter-scroll select {
     list-style-type: none;
-    color: #FAFAFA;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -130,7 +136,7 @@ main {
     width: 80%;
 }
 
-.filter-scroll ul li {
+#filter-scroll select option {
     padding: 10px 10px 10px 10px;
     width: 100%;
 }

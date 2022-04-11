@@ -63,37 +63,37 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 <div class="picture-container">
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-pîcture">
+                    <div class="under-picture">
                       <span class="picture-name">${photographersMedias[1].title}</span><span class="picture-likes">${photographersMedias[1].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[2].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-pîcture">
+                    <div class="under-picture">
                       <span class="picture-name">${photographersMedias[2].title}</span><span class="picture-likes">${photographersMedias[2].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[3].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-pîcture">
+                    <div class="under-picture">
                       <span class="picture-name">${photographersMedias[3].title}</span><span class="picture-likes">${photographersMedias[3].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-pîcture">
+                    <div class="under-picture">
                       <span class="picture-name">${photographersMedias[4].title}</span><span class="picture-likes">${photographersMedias[4].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-pîcture">
+                    <div class="under-picture">
                       <span class="picture-name">${photographersMedias[5].title}</span><span class="picture-likes">${photographersMedias[5].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
                     <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[6].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-pîcture">
+                    <div class="under-picture">
                       <span class="picture-name">${photographersMedias[6].title}</span><span class="picture-likes">${photographersMedias[6].likes}</span>
                     </div>
                   </div> 
