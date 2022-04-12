@@ -56,45 +56,62 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const photographersMedias = mediasArray.filter((media)=>{
                 return media.photographerId === Number(photographerId);
               });
-            console.log(photographerId);
             const photographerPicture = `
             
               <div class="card-container">
                 <div class="picture-container">
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[1].image}" alt="${photographersMedias[1].title}le ${photographersMedias[1].date}">
+                    <div class="under-pîcture">
                       <span class="picture-name">${photographersMedias[1].title}</span><span class="picture-likes">${photographersMedias[1].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[2].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[2].image}" alt="${photographersMedias[2].title}le ${photographersMedias[2].date}">
+                    <div class="under-pîcture">
                       <span class="picture-name">${photographersMedias[2].title}</span><span class="picture-likes">${photographersMedias[2].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[3].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[3].image}" alt="${photographersMedias[3].title}le ${photographersMedias[3].date}">
+                    <div class="under-pîcture">
                       <span class="picture-name">${photographersMedias[3].title}</span><span class="picture-likes">${photographersMedias[3].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[4].image}" alt="${photographersMedias[4].title}le ${photographersMedias[4].date}">
+                    <div class="under-pîcture">
                       <span class="picture-name">${photographersMedias[4].title}</span><span class="picture-likes">${photographersMedias[4].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[5].image}" alt="${photographersMedias[5].title}le ${photographersMedias[5].date}">
+                    <div class="under-pîcture">
                       <span class="picture-name">${photographersMedias[5].title}</span><span class="picture-likes">${photographersMedias[5].likes}</span>
                     </div>
                     </div>
                   <div class="card-picture">
-                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[6].image}" alt="${photographersMedias[0].title}le ${photographersMedias[0].date}">
-                    <div class="under-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[6].image}" alt="${photographersMedias[6].title}le ${photographersMedias[6].date}">
+                    <div class="under-pîcture">
                       <span class="picture-name">${photographersMedias[6].title}</span><span class="picture-likes">${photographersMedias[6].likes}</span>
+                    </div>
+                  </div> 
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[7].image}" alt="${photographersMedias[7].title}le ${photographersMedias[7].date}">
+                    <div class="under-pîcture">
+                      <span class="picture-name">${photographersMedias[7].title}</span><span class="picture-likes">${photographersMedias[7].likes}</span>
+                    </div>
+                  </div> 
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[8].image}" alt="${photographersMedias[8].title}le ${photographersMedias[8].date}">
+                    <div class="under-pîcture">
+                      <span class="picture-name">${photographersMedias[8].title}</span><span class="picture-likes">${photographersMedias[8].likes}</span>
+                    </div>
+                  </div> 
+                  <div class="card-picture">
+                    <img src="assets/photographers/${photographersMedias[0].photographerId}/${photographersMedias[9].image}" alt="${photographersMedias[9].title}le ${photographersMedias[9].date}">
+                    <div class="under-pîcture">
+                      <span class="picture-name">${photographersMedias[9].title}</span><span class="picture-likes">${photographersMedias[9].likes}</span>
                     </div>
                   </div> 
                 </div>
@@ -106,7 +123,3 @@ document.addEventListener("DOMContentLoaded", ()=>{
           }
 
 });
-
-function displayInfoContainer(){
-
-}

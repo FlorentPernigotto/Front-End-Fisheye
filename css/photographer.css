@@ -112,14 +112,16 @@ main {
 
 .photographer-picture {
     margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .card-container {
     display: flex;
 }
 .picture-container {
     display: flex;
-    justify-content: space-evenly;
-    gap: 95px;
+    justify-content: space-between;
+    gap: 80px;
     flex-direction: row;
     flex-wrap: wrap;
 }
