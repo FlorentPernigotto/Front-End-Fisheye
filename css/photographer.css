@@ -14,16 +14,13 @@ main {
     justify-content: center;
     position: absolute;
 }
-.photographer-picture {
-    margin-bottom: 100px;
-}
 .photograph-header {
     display: flex;
     flex-direction: row;
     background-color: #FAFAFA;
-    width: 90%;
     height: 300px;
-    margin: 0 100px;
+    margin-left: 100px;
+    margin-right: 100px;
     padding-left: 50px;
     padding-right: 50px;
     justify-content: space-between;
@@ -38,7 +35,6 @@ main {
     font-size: 2em;
     color: #901C1C;
 }
-
 .contact_button {
     display: flex;
     align-self: center;
@@ -66,23 +62,72 @@ main {
     object-fit: cover;
     border-radius: 50%;
 }
+
+/* Filtres */
+/*
+.filter {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    align-items: baseline;
+
+}
+.filter label {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 10px;
+}
+#filter-scroll {
+    display: flex;
+    width: 170px;
+    height: 50px;
+    background-color: #901C1C;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+#filter-scroll select option {
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+}
+#filter-popularity {
+    display: flex;
+}
+#filter-date {
+    display: flex;
+    border: 5px solid rgb(53, 138, 4);
+}
+#filter-title {
+    display: flex;  
+}
+
+/* Gallery média */
+
+.photographer-picture {
+    margin-bottom: 100px;
+}
 .card-container {
     display: flex;
-    justify-content: center;
 }
 .picture-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 95px;
     flex-direction: row;
-    width: 90%;
     flex-wrap: wrap;
 }
 .card-picture img {
     display: flex;
     object-fit: cover;
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     border-radius: 5px;
 }
 .under-picture {
@@ -100,59 +145,7 @@ main {
     color: #901C1C;
     width: 50%;
 }
-/* Filtres */
-.filter {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin-left: 100px;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    align-items: baseline;
-
-}
-.filter label {
-    font-weight: 700;
-    font-size: 18px;
-    margin-left: 10px;
-}
-#filter-scroll {
-    display: flex;
-    width: 170px;
-    height: 50px;
-    background-color: #901C1C;
-    border-radius: 5px;
-    margin-left: 20px;
-    font-family: "DM Sans", sans-serif;
-}
-#filter-scroll select {
-    list-style-type: none;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    margin: 0;
-    width: 80%;
-}
-
-#filter-scroll select option {
-    padding: 10px 10px 10px 10px;
-    width: 100%;
-}
-.filter-popularity {
-    display: flex;
-}
-.filter-date {
-    display: flex;/* none par default */
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
-}
-.filter-title {
-    display: flex; /* none par default */ 
-    border-bottom: 0px;
-}
-/*modal card*/
+/* modal card */
 .modal {
     display: flex;
     border-radius: 5px;
@@ -211,3 +204,38 @@ form input {
     border-radius: 5px;
     font-size: 30px;
 }
+
+
+
+.filter {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+  }
+  .filter select {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    outline: none;
+    color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #901C1C;
+    font-family: "DM Sans", sans-serif;
+  }
+  /* Select arrow styling */
+  .filter .myarrow {
+    width: 43px;
+    height: 48px;
+    position: absolute;
+    display: inline-block;
+    top: 1px;
+    right: 3px;
+    background: url("/uploads/media/default/0001/02/f7b4d3d2ba3fe1d8518e6e63d7740e1e73921abf.png") right / 90% no-repeat #eee;
+    pointer-events: none;
+  }
