@@ -135,10 +135,19 @@ main {
     height: 350px;
     border-radius: 5px;
 }
+.card-picture video {
+    display: flex;
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+}
 .under-picture {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 350px;
+    padding-top: 5px;
 }
 .picture-name {
     display: flex;
@@ -160,10 +169,13 @@ main {
     font-size: 24px;
     line-height: 31px;
 }
-.picture-likes svg {
+svg {
     width: 25px;
+    color: #901C1C;
     fill: #901C1C;
-    margin: 5px;
+    margin-left: 10px;
+    margin-top: 3px;
+    align-self: baseline;
 
 }
 /* modal card */
