@@ -30,6 +30,7 @@ main {
     display: flex;
     flex-direction: column;
     left: 10em;
+    width: 500px;
 }
 .photographer-profile span {
     font-size: 2em;
@@ -42,7 +43,9 @@ main {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    padding: 11px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 50px;
     width: 170px;
     height: 70px;
     border: none;
@@ -61,10 +64,10 @@ main {
     height: 15em;
     object-fit: cover;
     border-radius: 50%;
+    margin-left: 50px;
 }
 
 /* Filtres */
-/*
 .filter {
     display: flex;
     flex-direction: row;
@@ -87,6 +90,7 @@ main {
     background-color: #901C1C;
     border-radius: 5px;
     margin-left: 20px;
+    padding-left: 10px;
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;
@@ -122,28 +126,45 @@ main {
     gap: 95px;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 70px;
 }
 .card-picture img {
     display: flex;
     object-fit: cover;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 5px;
 }
 .under-picture {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .picture-name {
     display: flex;
     color: #901C1C;
-    width: 50%;
+    width: auto;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
 }
 .picture-likes {
     display: flex;
-    justify-content: flex-end;
     color: #901C1C;
-    width: 50%;
+    width: auto;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+}
+.picture-likes svg {
+    width: 25px;
+    fill: #901C1C;
+    margin: 5px;
+
 }
 /* modal card */
 .modal {
@@ -205,37 +226,3 @@ form input {
     font-size: 30px;
 }
 
-
-
-.filter {
-    position: relative;
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 100px;
-  }
-  .filter select {
-    display: inline-block;
-    height: 50px;
-    width: 150px;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    outline: none;
-    color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #901C1C;
-    font-family: "DM Sans", sans-serif;
-  }
-  /* Select arrow styling */
-  .filter .myarrow {
-    width: 43px;
-    height: 48px;
-    position: absolute;
-    display: inline-block;
-    top: 1px;
-    right: 3px;
-    background: url("/uploads/media/default/0001/02/f7b4d3d2ba3fe1d8518e6e63d7740e1e73921abf.png") right / 90% no-repeat #eee;
-    pointer-events: none;
-  }
