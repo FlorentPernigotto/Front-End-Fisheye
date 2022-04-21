@@ -1,4 +1,3 @@
-@import url("photographer.css");
 
 body {
     font-family: "DM Sans", sans-serif;
@@ -13,11 +12,14 @@ header {
     align-items: center;
     height: 90px;
     padding-bottom: 50px;
+    width: 100%;
 }
 
 h1 {
     color: #901C1C;
-    margin-right: 100px;
+}
+#bloc-page {
+    box-sizing: content-box;
 }
 
 .logo {
@@ -44,7 +46,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: auto;
+    width: calc((100% / 3 ) - (95px * 3));
     flex-grow: 1;
 }
 .photographer_section article a {

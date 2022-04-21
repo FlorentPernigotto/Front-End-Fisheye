@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/lightbox.css" type="text/css" />
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/06c99f565d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
@@ -50,7 +51,13 @@
         <div class="picture-container">
           
         </div>
-
+        <!-- Lightbox pour aggrandir l'image dans la galerie -->
+        <div id="lightboxContent" class="lightboxCard"> 
+          <span class="close">&times;</span>
+          <div class="lightboxPictureContent">
+            <img src="" alt="">
+          </div>
+        </div>
         <!-- onglet bas droite Nombre de likes / tarif/jours -->
         <div class="photographer-like-average">
           
@@ -63,8 +70,9 @@
         </div>
       </main>
       
-      <script src="scripts/utils/contactForm.js"></script>
-      <script src="scripts/pages/photographer.js"></script>
+      <script src="scripts/utils/contactForm.js" defer></script>
+      <script src="scripts/pages/photographer.js" defer></script>
+      <script src="scripts/utils/scripts.js" defer></script>
     </div>
   </body>
 </html>

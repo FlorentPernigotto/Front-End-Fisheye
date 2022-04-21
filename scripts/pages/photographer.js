@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
             const photographerPrice = `
 
-            <span>${photographersInfos[0].price}</span>
+            <span>${photographersInfos[0].price}€ /Jours</span>
             `;
 
             document.querySelector(".average-per-day").innerHTML = photographerPrice;
@@ -61,114 +61,80 @@ document.addEventListener("DOMContentLoaded", ()=>{
          function displayPhotographerMedias(mediasArray){
             const photographersMedias = mediasArray.filter((media)=>{
                 return media.photographerId === Number(photographerId);
-              });
-              
-              function lightbox(mediasArray, media){
-  
-                // Le media actuel qui est dans la lightbox
-           
-                let actualMediaId = media.id;
-           
-               //La lightbox est creee
-           
-           
-             const lighboxContent = document.querySelector('.picture-container');
-           
-           
-             lighboxContent.innerHTML = mediasFactory(media);
-           
-             const next = document.querySelector("#next");
-           
-             const previous = document.querySelector("#previous");
-           
-           
-           next.addEventListener("click", ()=>{
-             
-                 // Premierement il faut determinet l'index du media actuel dans la lightbox
-             
-                 const actualIndex = mediasArray.findIndex((element)=>{
-                   
-                     return element.id === actualMediaId;
-                   
-                 });
-             
-                 if(actualIndex !== mediasArray.length){
-                   
-                      lighboxContent.innerHTML = mediasFactory(mediasArray[actualIndex + 1]);
-                   
-                      return actualMediaId = mediasArray[actualIndex + 1].id;
-                   
-                 }
-             
-           });
-           
-           previous.addEventListener("click", ()=>{
-             
-                 const actualIndex = mediasArray.findIndex((element)=>{
-                   
-                     return element.id === actualMediaId;
-                   
-                 });
-             
-                if(actualIndex !== 0){
-                  
-                     lighboxContent.innerHTML = mediasFactory(medias[actualIndex - 1]);
-                   
-                      return actualMediaId = medias[actualIndex - 1].id;
-                   
-                  
-                }
-           });
-         }
-              
-              function mediasFactory(media){
 
-                if(media.image !== undefined){
-                
-                      return createImage(media);
-                
-                }
-                
-                return createVideo(media);
-          
-          }
+              
+            });
+              
+            function mediasFactory(media){
 
-          
-          function createImage(sourceImg){
-          
-              return `
-              <div class="card-media">
-                <a href="assets/photographers/${photographersMedias[0].photographerId}/${sourceImg.image}" data-lightbox="image-1" data-title="${sourceImg.title}">
-                <img src="assets/photographers/${photographersMedias[0].photographerId}/${sourceImg.image}" alt="${sourceImg.title}le ${sourceImg.date}">
-                <div class="under-picture">
-                  <span class="picture-name">${sourceImg.title}</span><span class="picture-likes">${sourceImg.likes}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg></span>
-                </div>
-              </div>`;
-          }
-          
-          function createVideo(sourceVideo){
-              return `
-              <div class="card-media">
-                <a href="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}">
-                <video alt="${sourceVideo.alt}">
-                  <source src="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}" alt="${sourceVideo.title}le ${sourceVideo.date}">
-                </video>
-                <div class="under-picture">
-                  <span class="picture-name">${sourceVideo.title}</span><span class="picture-likes">${sourceVideo.likes}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg></span>
-                </div>
-              </div>`
-          }
-          let mediasHTML = "";
-          photographersMedias.forEach((element)=>{
-                  mediasHTML+= `
-                  
-                      ${mediasFactory(element)}
-                  
-                  `;
-          
+              if(media.image !== undefined){
+              
+                    return createImage(media);
+              
+              }
+              
+              return createVideo(media);
+            
+            }
+
+        
+              function createImage(sourceImg){
+        
+                return `
+                  <div class="card-media">
+                    <a href="assets/photographers/${photographersMedias[0].photographerId}/${sourceImg.image}" data-lightbox="image-1" data-title="${sourceImg.title}">
+                      <img src="assets/photographers/${photographersMedias[0].photographerId}/${sourceImg.image}" alt="${sourceImg.title}le ${sourceImg.date}">
+                      <div class="under-picture">
+                        <span class="picture-name">${sourceImg.title}</span><span class="picture-likes">${sourceImg.likes}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg></span>
+                      </div>
+                    </a>
+                  </div>
+                `;
+
+              }
+        
+              function createVideo(sourceVideo){
+                return `
+                <div class="card-media">
+                  <a class="link" href="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}">
+                    <video alt="${sourceVideo.alt}">
+                      <source src="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}" alt="${sourceVideo.title}le ${sourceVideo.date}">
+                    </video>
+                    <div class="under-picture">
+                      <span class="picture-name">${sourceVideo.title}</span><span class="picture-likes">${sourceVideo.likes}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg></span>
+                    </div>
+                  </a>
+                </div>`;
+              }
+              let mediasHTML = "";
+                photographersMedias.forEach((element)=>{
+                mediasHTML+= `${mediasFactory(element)}`;
+        
           });
-          
-          document.querySelector(".picture-container").innerHTML = mediasHTML;
+        
+        document.querySelector(".picture-container").innerHTML = mediasHTML;
 
-          
+        const modale = document.querySelector("#lightboxContent");
+        const close = document.querySelector(".close");
+        const links = document.querySelectorAll(".card-media a");
+        
+        // On ajoute l'écouteur click sur les liens
+        for(let link of links){
+            link.addEventListener("click", function(e){
+                // On désactive le comportement des liens
+                e.preventDefault();
+
+                // On ajoute l'image du lien cliqué dans la modale
+                const image = modale.querySelector(".lightboxPictureContent img");
+                image.src = this.href;
+
+                // On affiche la modale
+                modale.classList.add("show");
+              });
+          }
+        
+        // On active le bouton close
+        close.addEventListener("click", function(){
+            modale.classList.remove("show");
+          });
 }});
