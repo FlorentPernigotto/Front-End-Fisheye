@@ -1,35 +1,34 @@
 h2 {
     margin: 0;
     padding: 0;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 300;
     color: #D3573C;
 }
-#contact_modal {
-    display: none;
-}
 main {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     position: absolute;
+}
+#bloc-page {
+    width: 1440px;
 }
 .photograph-header {
     display: flex;
     flex-direction: row;
     background-color: #FAFAFA;
-    height: 300px;
+    height: auto;
     margin-left: 100px;
     margin-right: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 57px 50px 56px 50px;
     justify-content: space-between;
     align-items: center;
 }
 .photographer-profile {
     display: flex;
     flex-direction: column;
-    left: 10em;
     width: 500px;
 }
 .photographer-profile span {
@@ -68,13 +67,14 @@ main {
 }
 
 /* Filtres */
+
 .filter {
     display: flex;
     flex-direction: row;
     width: 90%;
     margin-left: 100px;
     margin-bottom: 50px;
-    margin-top: 5px;
+    margin-top: 15px;
     align-items: baseline;
 
 }
@@ -96,7 +96,6 @@ main {
     font-weight: 500;
     color: #FFFFFF;
 }
-
 #filter-scroll select option {
     padding: 10px 10px 10px 10px;
     width: 100%;
@@ -117,39 +116,36 @@ main {
 .photographer-picture {
     display: flex;
     flex-direction: row;
+}
+.picture-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    flex-grow: 3;
+    gap: 35px;
     margin-bottom: 100px;
     margin-left: 100px;
     margin-right: 100px;
 }
-.card-container {
-    display: flex;
-}
-.picture-container {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card-picture {
-    
+.card-media {
     width: calc(( 100% / 3 ) - (30px * 3));
+    flex-grow: 1;
 }
-.card-picture img {
+.card-media img {
     display: flex;
     object-fit: cover;
     width: 100%;
     height: 350px;
     border-radius: 5px;
 }
-.card-picture video {
+.card-media video {
     display: flex;
     object-fit: cover;
     width: 100%;
     height: 350px;
     border-radius: 5px;
 }
+/* informations sous le média */
 .under-picture {
     display: flex;
     flex-direction: row;
@@ -176,7 +172,11 @@ main {
     font-weight: 500;
     font-size: 1.2em;
     line-height: 31px;
+
 }
+
+/* svg des likes */
+
 svg {
     width: 25px;
     color: #901C1C;
@@ -186,7 +186,12 @@ svg {
     align-self: baseline;
 
 }
+
 /* modal card */
+
+#contact_modal {
+    display: none;
+}
 .modal {
     display: flex;
     border-radius: 5px;
@@ -201,35 +206,29 @@ svg {
     left: 25%;
     top: 20%;
 }
-
 .modal header {
     justify-content: space-between;
     width: 100%;
 }
-
 .modal header img {
     cursor: pointer;
 }
-
 .modal header h2 {
     font-size: 64px;
     font-weight: normal;
     text-align: center;
     color: #312E2E;
 }
-
 form {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
 }
-
 form label {
     color: #312E2E;
     font-size: 36px;
 }
-
 form div {
     display: flex;
     flex-direction: column;
@@ -237,7 +236,6 @@ form div {
     align-items: self-start;
     margin-bottom: 26px;
 }
-
 form input {
     width: 100%;
     height: 68px;
@@ -245,4 +243,3 @@ form input {
     border-radius: 5px;
     font-size: 30px;
 }
-
