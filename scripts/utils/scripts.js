@@ -14,12 +14,12 @@ window.onload = () => {
                 image.src = this.href;
 
             // On affiche la modale
-            modale.classList.add("show");
+            modale.setAttribute("style", "display: flex" );
         });
     }
     
     // On active le bouton close
     close.addEventListener("click", function(){
-        modale.classList.remove("show");
+        modale.setAttribute("style", "display: none" );
     });
 }

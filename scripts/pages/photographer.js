@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
           });
         
         document.querySelector(".picture-container").innerHTML = mediasHTML;
-
+          // je crées nôtre lightbox 
         const modale = document.querySelector("#lightboxContent");
         const close = document.querySelector(".close");
         const links = document.querySelectorAll(".card-media a");
@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 const image = modale.querySelector(".lightboxPictureContent img");
                 image.src = this.href;
 
-                // On affiche la modale
-                modale.classList.add("show");
+                // On affiche l'image
+                modale.setAttribute("style", "display: flex" );
               });
           }
         
         // On active le bouton close
         close.addEventListener("click", function(){
-            modale.classList.remove("show");
+           modale.setAttribute("style", "display: none" );
           });
 }});

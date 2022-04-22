@@ -1,3 +1,4 @@
+@import url(/scripts/utils/reset.css);
 
 body {
     font-family: "DM Sans", sans-serif;
@@ -12,16 +13,20 @@ header {
     align-items: center;
     height: 90px;
     padding-bottom: 50px;
-    width: 100%;
+    width: 90%;
 }
 
 h1 {
-    color: #901C1C;
+    font-size: 36px;
+    color: #901C1C;;
 }
 #bloc-page {
     box-sizing: content-box;
 }
-
+main {
+    display: flex;
+    justify-content: center;
+}
 .logo {
     width: 200px;
     height: 50px;
@@ -31,23 +36,24 @@ h1 {
 .photographer_section {
     display: flex;
     justify-content: space-between;
-    flex-grow: 3;
     flex-direction: row;
     flex-wrap: wrap;
     align-self: center;
     gap: 95px;
     margin: 100px 2em 50px 2em;
+    padding-left: 30px;
+    padding-right: 30px;
     width: 90%;
 }
 
 .photographer_section article {
+    display: flex;
     justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: calc((100% / 3 ) - (95px * 3));
-    flex-grow: 1;
 }
 .photographer_section article a {
     text-decoration: none;
@@ -65,8 +71,8 @@ h1 {
 }
 
 .photographer_section article img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     object-fit: cover;
 }
