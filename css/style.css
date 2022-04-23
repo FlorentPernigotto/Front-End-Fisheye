@@ -38,22 +38,13 @@ main {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    flex-grow: 3;
     align-self: center;
     gap: 95px;
     margin: 100px 2em 50px 2em;
     padding-left: 30px;
     padding-right: 30px;
     width: 90%;
-}
-
-.photographer_section article {
-    display: flex;
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: calc((100% / 3 ) - (95px * 3));
 }
 .photographer_section article a {
     text-decoration: none;
@@ -63,6 +54,16 @@ main {
     align-items: center;
     flex-direction: column;
     color: black;
+    width: calc((100% / 3 ) + (5px * 3));
+}
+
+.photographer_section article {
+    display: flex;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .photographer_section article h2 {
     color: #D3573C;
