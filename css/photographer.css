@@ -207,6 +207,10 @@ header {
 
 }
 
+/* Lightbox */
+
+
+
 /* svg des likes */
 
 svg {
@@ -274,4 +278,26 @@ form input {
     border: none;
     border-radius: 5px;
     font-size: 30px;
+}
+
+
+/* onglet total like + salaire */
+
+.photographer-like-average {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    position: fixed;
+    bottom: 0px;
+    right: 36px;
+    background-color: #DB8876;
+    border-radius: 5px 5px 0px 0px ;
+    font-weight: 600;
+    column-gap: 40px;
+}
+.total-like {
+    padding: 15px;
+}
+.average-per-day {
+    padding: 15px;
 }

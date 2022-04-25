@@ -46,6 +46,15 @@ main {
     padding-right: 30px;
     width: 90%;
 }
+.photographer_section article {
+    display: flex;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+}
 .photographer_section article a {
     text-decoration: none;
     justify-self: center;
@@ -54,21 +63,12 @@ main {
     align-items: center;
     flex-direction: column;
     color: black;
-    width: calc((100% / 3 ) + (5px * 3));
-}
-
-.photographer_section article {
-    display: flex;
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .photographer_section article h2 {
     color: #D3573C;
     font-size: 36px;
-    margin: 10px 0 10px 0   ;
+    margin: 10px 0 10px 0 ;
+    width: auto;
 }
 
 .photographer_section article img {
@@ -81,10 +81,10 @@ main {
 .location span{
     color: #901C1C;
     font-weight: 600;
-
-    
+    width: auto;
 }
 .photographer_section article quote {
     font-weight: 600;
-
+    width: auto;
+    padding: 10px 0px 10px 0px;
 }

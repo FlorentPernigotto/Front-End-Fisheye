@@ -61,8 +61,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
          function displayPhotographerMedias(mediasArray){
             const photographersMedias = mediasArray.filter((media)=>{
                 return media.photographerId === Number(photographerId);
+                return media.likes === Number(mediaLikes)
 
-              
+              console.log(mediaLikes);
             });
               
             function mediasFactory(media){
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
               function createVideo(sourceVideo){
                 return `
                 <div class="card-media">
-                  <a class="link" href="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}">
+                  <a href="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}">
                     <video alt="${sourceVideo.alt}">
                       <source src="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}" alt="${sourceVideo.title}le ${sourceVideo.date}">
                     </video>
@@ -127,7 +128,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 // On ajoute l'image du lien cliqué dans la modale
                 const image = modale.querySelector(".lightboxPictureContent img");
                 image.src = this.href;
-
                 // On affiche l'image
                 modale.setAttribute("style", "display: flex" );
               });
