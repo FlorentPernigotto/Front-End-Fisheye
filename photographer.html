@@ -39,25 +39,27 @@
           
         </div>
         <div class="filter">
-          <label for="filter-scroll"> Trier par : </label>
-          <span class="myarrow"></span>
-          <select name="filter" id="filter-scroll">
-            <option id="filter-popularity" value="populaire">Popularité</option>
-            <option id="filter-date" value="date">Date</option>
-            <option id="filter-title" value="titre">Titre</option>
-          </select>
+          <span>Trier par :</span>
+          <div class="button-filter">
+            <button id="select-first-option" class="select-option">
+              <span id="select-first-option-text">Popularité</span>
+            </button>
+            <div id="select-block-options">
+              <button class="select-option">
+                Date
+              </button>
+              <button class="select-option">
+                Titre
+              </button>
+            </div>
+          </div>
         </div>
         <!-- Ici se trouve la ga llerie des média du photographe-->
         <div class="picture-container">
           
         </div>
         <!-- Lightbox pour aggrandir l'image dans la galerie -->
-        <div id="lightboxContent" class="lightboxCard"> 
-          <span class="close">&times;</span>
-          <div class="lightboxPictureContent">
-            <img src="" alt="">
-          </div>
-        </div>
+        
         <!-- onglet bas droite Nombre de likes / tarif/jours -->
         <div class="photographer-like-average">
           
@@ -68,11 +70,30 @@
             
           </div>
         </div>
+        <!-- LightboxContent -->
+        <div id="lightboxContent">
+
+          <div id="lightboxMedia">
+                      <!--svg close-->
+            <svg id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+              <path d="M42 4.23L37.77 0L21 16.77L4.23 0L0 4.23L16.77 21L0 37.77L4.23 42L21 25.23L37.77 42L42 37.77L25.23 21L42 4.23Z"/>
+            </svg>
+            <!--svg fleche à gauche-->
+            <svg id="arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/>
+            </svg>
+            <!--svg fleche à droite-->
+            <svg id="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/>
+            </svg>
+            <img src="" alt=""/>
+          </div>
+        </div>
       </main>
       
       <script src="scripts/utils/contactForm.js" ></script>
       <script src="scripts/pages/photographer.js"></script>
+      <script src="scripts/utils/filter.js"></script>
     </div>
   </body>
 </html>
- 
