@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 
          }).catch((error)=>{
 
-             console.log(error);
+             console.log(photographersMedias.likes);
          });
 
 
@@ -60,12 +60,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
          function displayPhotographerMedias(mediasArray){
             const photographersMedias = mediasArray.filter((media)=>{
-                return media.photographerId === Number(photographerId);
-                return media.likes === Number(mediaLikes)
+                return media.photographerId === Number(photographerId); 
 
-              console.log(mediaLikes);
             });
-              
             function mediasFactory(media){
 
               if(media.image !== undefined){
@@ -113,6 +110,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
           });
         
+        
         document.querySelector(".picture-container").innerHTML = mediasHTML;
           // je crées nôtre lightbox 
         const modale = document.querySelector("#lightboxContent");
@@ -137,4 +135,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
         close.addEventListener("click", function(){
            modale.setAttribute("style", "display: none" );
           });
+
 }});
