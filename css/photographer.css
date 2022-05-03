@@ -1,4 +1,6 @@
-@import url(/scripts/utils/reset.css);
+@import url(/css/reset.css);
+@import url(/css/filtre.css);
+@import url(/css/lightbox.css);
 
 h2 {
     margin: 0;
@@ -91,52 +93,6 @@ header {
     border-radius: 50%;
     margin-left: 50px;
 }
-
-/* Filtres */
-
-.filter {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin-left: 100px;
-    margin-bottom: 50px;
-    margin-top: 15px;
-    align-items: baseline;
-
-}
-.filter label {
-    font-weight: 700;
-    font-size: 18px;
-    margin-left: 10px;
-}
-#filter-scroll {
-    display: flex;
-    width: 170px;
-    height: 50px;
-    background-color: #901C1C;
-    border-radius: 5px;
-    margin-left: 20px;
-    padding-left: 10px;
-    font-family: "DM Sans", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: #FFFFFF;
-}
-#filter-scroll select option {
-    padding: 10px 10px 10px 10px;
-    width: 100%;
-}
-#filter-popularity {
-    display: flex;
-}
-#filter-date {
-    display: flex;
-    border: 5px solid rgb(53, 138, 4);
-}
-#filter-title {
-    display: flex;  
-}
-
 /* Gallery média */
 
 .photographer-picture {

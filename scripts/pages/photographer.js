@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         document.querySelector(".picture-container").innerHTML = mediasHTML;
           // je crées nôtre lightbox 
         const modale = document.querySelector("#lightboxContent");
-        const close = document.querySelector(".close");
+        const close = document.querySelector("#close");
         const links = document.querySelectorAll(".card-media a");
         
         // On ajoute l'écouteur click sur les liens
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 e.preventDefault();
 
                 // On ajoute l'image du lien cliqué dans la modale
-                const image = modale.querySelector(".lightboxPictureContent img");
+                const image = modale.querySelector("#lightboxMedia img");
                 image.src = this.href;
                 // On affiche l'image
                 modale.setAttribute("style", "display: flex" );
