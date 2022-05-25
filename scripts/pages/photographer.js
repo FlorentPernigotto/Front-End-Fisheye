@@ -25,6 +25,7 @@ async function setData() {
 }
 setData();
 
+
 function setDataInHtml(photographer, media) {
   setProfilHeader(photographer);
   setProfilMedia(media);
