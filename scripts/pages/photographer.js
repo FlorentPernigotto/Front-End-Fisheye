@@ -12,7 +12,7 @@ function getParamsUrl(url) {
 const idUser = getParamsUrl(window.location);
 
 async function setData() {
-  let response = await fetch("../data/photographers.json");
+  let response = await fetch("data/photographers.json");
   if (!response.ok) {
     return "error";
   }
