@@ -45,6 +45,12 @@
   object-fit: contain;
 }
 
+.lightbox_media__content img:focus,
+.lightbox_media__content video:focus {
+  border: none;
+  outline: none;
+}
+
 .link-previous-media {
   position: absolute;
   left: 20px;

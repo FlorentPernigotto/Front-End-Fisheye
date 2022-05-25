@@ -30,11 +30,7 @@
           </div>
         </div>
         <div class="profil__contact">
-          <button
-            class="contact_button"
-            onclick="displayModal()"
-            aria-label="Contactez-moi"
-          >
+          <button class="contact_button" onclick="displayModal()" aria-label="Contactez-moi" >
             Contactez-moi
           </button>
         </div>
@@ -46,37 +42,17 @@
         <div class="dropdown">
           <label for="filter" class="dropdown-span">Trier par</label>
           <div>
-            <button
-              class="dropdown-toggle"
-              aria-haspopup="listbox"
-              id="filter"
-              aria-expanded="false"
-            >
+            <button class="dropdown-toggle" aria-haspopup="listbox" id="filter" aria-expanded="false" >
               Popularité
             </button>
             <ul role="listbox" class="dropdown-list">
-              <li
-                role="option"
-                tabindex="0"
-                aria-selected="true"
-                data-name="likes"
-              >
+              <li role="option" tabindex="0" aria-selected="true" data-name="likes" >
                 Popularité
               </li>
-              <li
-                role="option"
-                tabindex="0"
-                aria-selected="false"
-                data-name="date"
-              >
+              <li role="option" tabindex="0" aria-selected="false" data-name="date" >
                 Date
               </li>
-              <li
-                role="option"
-                tabindex="0"
-                aria-selected="false"
-                data-name="title"
-              >
+              <li role="option" tabindex="0" aria-selected="false" data-name="title" >
                 Titre
               </li>
             </ul>
@@ -129,27 +105,12 @@
     </div>
 
     <div id="lightbox_media">
-      <button
-        id="close-lightbox_media"
-        style="background: url(assets/icons/close.svg)"
-        onclick="closeLightbox()"
-        aria-label="Fermer lightbox"
-      ></button>
+      <button id="close-lightbox_media" style="background: url(assets/icons/close.svg)" onclick="closeLightbox()" aria-label="Fermer lightbox" ></button>
       <div class="lightbox_media__content"></div>
-      <a
-        href="#"
-        aria-label="Image précédente"
-        class="link-previous-media"
-        onclick="changeMediaLightBox(-1)"
-      >
+      <a href="#" aria-label="Image précédente" class="link-previous-media" onclick="changeMediaLightBox(-1)" >
         <img src="./assets/icons/arrow_icon.svg" alt="arrow icon" />
       </a>
-      <a
-        href="#"
-        aria-label="Image suivante"
-        class="link-next-media"
-        onclick="changeMediaLightBox(1)"
-      >
+      <a href="#" aria-label="Image suivante" class="link-next-media" onclick="changeMediaLightBox(1)" >
         <img src="./assets/icons/arrow_icon.svg" alt="arrow icon" />
       </a>
     </div>

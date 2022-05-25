@@ -20,7 +20,7 @@ function photographerFactory(data) {
     pLocation.textContent = location;
     pTagLine.textContent = tagline;
     pPrice.textContent = priceDay;
-    link.href = `/photographer.html?i=${id}`;
+    link.href = `photographer.html?i=${id}`;
     link.appendChild(img);
     link.appendChild(h2);
     div.appendChild(pLocation);
