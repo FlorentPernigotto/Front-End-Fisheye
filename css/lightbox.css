@@ -64,3 +64,14 @@
   top: 50%;
   cursor: pointer;
 }
+
+.lightbox_media__title {
+
+  position: relative;
+  top: 95%;
+  left: 16.7%;
+  color: #901C1C;
+  font-size: 24px;
+  padding-top: 5px;
+
+}
