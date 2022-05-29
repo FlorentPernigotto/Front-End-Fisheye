@@ -1,139 +1,131 @@
-document.addEventListener("DOMContentLoaded", ()=>{
-     let photographerId = window.location.search;
+const profilMedia = document.querySelector("#profil__media");
 
-         photographerId = new URLSearchParams(photographerId);
+let typeSort = ""; // Type de tri des média
+let listMediaId = []; //Variable qui va permttre le filtre avec la list des ID des médias
+let allLikes = 0; // Tout les likes des médias
 
-         photographerId = photographerId.get("id");
+//Obtenir l'ID du photographe pour charger les données
+function getParamsUrl(url) {
+  let string = url.search;
+  return string.substring(3);
+}
+const idUser = getParamsUrl(window.location);
 
-         fetch("data/photographers.json").then((response)=>{
+async function setData() {
+  let response = await fetch("data/photographers.json");
+  if (!response.ok) {
+    return "error";
+  }
+  let data = await response.json();
 
-                return response.json();
+  let photographer = data.photographers.find((element) => element.id == idUser);
+  let media = data.media.filter((m) => m.photographerId == idUser);
 
-         }).then((values)=>{
-
-            const photographersInfos = values.photographers;
-
-            const photographersMedias = values.media;
-
-            displayPhotographerInfo(photographersInfos);
-
-            displayPhotographerMedias(photographersMedias);
-            
-                
-         }).catch((error)=>{
-
-             console.log(photographersMedias.likes);
-         });
+  setDataInHtml(photographer, media);
+}
+setData();
 
 
-         function displayPhotographerInfo(photographersArray){
-            const photographersInfos = photographersArray.filter((photographer)=>{
+function setDataInHtml(photographer, media) {
+  setProfilHeader(photographer);
+  setProfilMedia(media);
+  setSectionInfo(photographer, media);
+}
 
-                return photographer.id === Number(photographerId);
+//Mettre les informations pour la section en bas à droite
+function setSectionInfo(photographer, media, afterLikeEvent = false) {
+  if (afterLikeEvent) {
+    document.getElementById("photographer-all-likes").innerText = allLikes;
+  } else {
+    allLikes = 0;
+    media.forEach((element) => {
+      allLikes += element.likes;
+    });
 
-            }); 
+    document.getElementById("photographer-all-likes").innerText = allLikes;
+    document.getElementById(
+      "photographer-price-day"
+    ).innerText = `${photographer.price}€ / jour`;
+  }
+}
 
-            const photographerProfile = `
-            
-              <div class="photographer-profile">
-                  <h2>${photographersInfos[0].name}</h2></br>
-                  <span>${photographersInfos[0].city}, ${photographersInfos[0].country}</span> </br>
-                  <quote>${photographersInfos[0].tagline}</quote>
-              </div>
-              <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-              <div class="user-pic">
-                <img src=assets/photographers/portrait/${photographersInfos[0].portrait}>
-              </div>
-            `;
+//Mettre info dans la presentation du photographe
+function setProfilHeader(photographer) {
+  document.getElementById(
+    "modalTitle"
+  ).innerHTML = `Contactez-moi<br>${photographer.name}`;
+  document.getElementById("profilName").innerText = photographer.name;
+  document.getElementById(
+    "profilLocation"
+  ).innerText = `${photographer.city}, ${photographer.country}`;
+  document.getElementById("profilTagline").innerText = photographer.tagline;
 
-            document.querySelector(".photograph-header").innerHTML = photographerProfile;
+  document.getElementById(
+    "profilImage"
+  ).src = `assets/photographers/${photographer.portrait}`;
+}
 
-            const photographerPrice = `
+//Ajoute tout les medias du photographe
+function setProfilMedia(media) {
+  media.forEach((element) => {
+    let media = mediaFactory(element);
+    let li = media.createElement();
+    profilMedia.innerHTML += li;
+  });
+  listMedia = document.querySelectorAll("#profil__media li");
+  sortMedia("likes");
+}
 
-            <span>${photographersInfos[0].price}€ /Jours</span>
-            `;
+function likeEvent(event) {
+  let classList = event.classList;
+  let likeContainer = classList.contains("like") ? event : event.parentNode;
+  let likeText = likeContainer.firstElementChild;
+  if (likeContainer.classList.contains("liked")) {
+    likeText.innerText = parseInt(likeText.innerText) - 1;
+    allLikes -= 1;
+  } else {
+    likeText.innerText = parseInt(likeText.innerText) + 1;
+    allLikes += 1;
+  }
+  setSectionInfo(null, null, true);
+  likeContainer.classList.toggle("liked");
+}
 
-            document.querySelector(".average-per-day").innerHTML = photographerPrice;
-          }
+function sortMedia(type) {
+  if (type != typeSort) {
+    let array = [...listMedia];
 
-         // filtre tout les médias en lié de l'id photograph
+    array.sort(function (a, b) {
+      let value1;
+      let value2;
+      if (type == "date") {
+        value2 = new Date(a.dataset.date).getTime();
+        value1 = new Date(b.dataset.date).getTime();
+      } else if (type == "likes") {
+        value2 = parseInt(a.dataset.likes);
+        value1 = parseInt(b.dataset.likes);
+      } else if (type == "title") {
+        value1 = a.dataset.title.toLowerCase();
+        value2 = b.dataset.title.toLowerCase();
+      }
+      if (value1 > value2) return 1;
+      if (value1 < value2) return -1;
+    });
 
-         function displayPhotographerMedias(mediasArray){
-            const photographersMedias = mediasArray.filter((media)=>{
-                return media.photographerId === Number(photographerId); 
+    profilMedia.innerHTML = "";
+    array.forEach((element) => {
+      profilMedia.appendChild(element);
+    });
+    typeSort = type;
+    setListMediaId(profilMedia);
+  }
+}
 
-            });
-            function mediasFactory(media){
-
-              if(media.image !== undefined){
-              
-                    return createImage(media);
-              
-              }
-              
-              return createVideo(media);
-            
-            }
-
-        
-              function createImage(sourceImg){
-        
-                return `
-                  <div class="card-media">
-                    <a href="assets/photographers/${photographersMedias[0].photographerId}/${sourceImg.image}" data-lightbox="image-1" data-title="${sourceImg.title}">
-                      <img src="assets/photographers/${photographersMedias[0].photographerId}/${sourceImg.image}" alt="${sourceImg.title}le ${sourceImg.date}">
-                      <div class="under-picture">
-                        <span class="picture-name">${sourceImg.title}</span><span class="picture-likes">${sourceImg.likes}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg></span>
-                      </div>
-                    </a>
-                  </div>
-                `;
-
-              }
-        
-              function createVideo(sourceVideo){
-                return `
-                <div class="card-media">
-                  <a href="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}">
-                    <video alt="${sourceVideo.alt}">
-                      <source src="assets/photographers/${photographersMedias[0].photographerId}/${sourceVideo.video}" alt="${sourceVideo.title}le ${sourceVideo.date}">
-                    </video>
-                    <div class="under-picture">
-                      <span class="picture-name">${sourceVideo.title}</span><span class="picture-likes">${sourceVideo.likes}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="currentColor" d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></svg></span>
-                    </div>
-                  </a>
-                </div>`;
-              }
-              let mediasHTML = "";
-                photographersMedias.forEach((element)=>{
-                mediasHTML+= `${mediasFactory(element)}`;
-        
-          });
-        
-        
-        document.querySelector(".picture-container").innerHTML = mediasHTML;
-          // je crées nôtre lightbox 
-        const modale = document.querySelector("#lightboxContent");
-        const close = document.querySelector("#close");
-        const links = document.querySelectorAll(".card-media a");
-        
-        // On ajoute l'écouteur click sur les liens
-        for(let link of links){
-            link.addEventListener("click", function(e){
-                // On désactive le comportement des liens
-                e.preventDefault();
-
-                // On ajoute l'image du lien cliqué dans la modale
-                const image = modale.querySelector("#lightboxMedia img");
-                image.src = this.href;
-                // On affiche l'image
-                modale.setAttribute("style", "display: flex" );
-              });
-          }
-        
-        // On active le bouton close
-        close.addEventListener("click", function(){
-           modale.setAttribute("style", "display: none" );
-          });
-
-}});
+function setListMediaId(list) {
+  listMediaId = [];
+  list = [...list.children];
+  list.forEach((element) => {
+    let media = element.querySelector("[data-id]");
+    listMediaId.push(media.dataset.id);
+  });
+}

@@ -1,0 +1,99 @@
+.profil {
+  margin: 0 5em;
+}
+.profil__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 2em;
+}
+
+.profil__presentation {
+  width: 100%;
+}
+
+.profil__presentation h1 {
+  font-size: 3em;
+  text-align: start;
+  color: #d3576c;
+}
+
+.profil__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.photographer-info {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  background-color: #db8876;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-radius: 5px 5px 0 0;
+  width: 300px;
+}
+
+.photographer-info img {
+  filter: brightness(0%);
+}
+
+.photographer-info div {
+  display: flex;
+  gap: 4px;
+}
+
+.profil__contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profil__contact button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 20px 11px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profil__contact button:hover,
+profil__contact button:focus {
+  background-color: #d3576c;
+  color: black;
+}
+
+.profil__image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#profilLocation {
+  color: #901c1c;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+#profilImage {
+  width: 12em;
+  height: 12em;
+}
+
+#profil__media {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5em;
+}
+
+#profilTagline {
+  color: #525252;
+}
