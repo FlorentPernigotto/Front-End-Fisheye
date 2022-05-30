@@ -28,7 +28,7 @@ function setMediaLightbox(id) {
 }
 //Nom de l'image sous la l'image dans la lightbox
 
-document.getElementById("lightbox_media__title").innerHTML = ``;
+document.getElementById("lightbox_media__title").innerHTML = `${data.title}`;
 
 // Recherche quelle media afficher
 function changeMediaLightBox(index) {
