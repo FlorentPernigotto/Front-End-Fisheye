@@ -107,7 +107,9 @@
     <div id="lightbox_media">
       <button id="close-lightbox_media" style="background: url(assets/icons/close.svg)" onclick="closeLightbox()" aria-label="Fermer lightbox" ></button>
       <div class="lightbox_media__content"></div>
-      <p class="lightbox_media__title">Title picture</p>
+      <div class="lightbox_mediainfo_title">
+        <p class="media__title" id="lightbox_media__title">Title picture</p>
+      </div>  
       <a href="#" aria-label="Image précédente" class="link-previous-media" onclick="changeMediaLightBox(-1)" >
         <img src="./assets/icons/arrow_icon.svg" alt="arrow icon" />
       </a>

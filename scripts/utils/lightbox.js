@@ -27,11 +27,8 @@ function setMediaLightbox(id) {
   mediaClone.focus();
 }
 //Nom de l'image sous la l'image dans la lightbox
-function nameUnderMedia() {
-  const mediaName = document.querySelector("#lightbox_media > span");
 
-  mediaName.innerHTM = "TEST BLABLABLABLA";
-}
+document.getElementById("lightbox_media__title").innerHTML = ``;
 
 // Recherche quelle media afficher
 function changeMediaLightBox(index) {
